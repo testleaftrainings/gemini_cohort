@@ -1,4 +1,4 @@
-package sprint_01;
+package Sprint_01;
 
 import java.time.Duration;
 
@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class S6_001_CreateAccount {
+public class S6_001_CreateAc {
 
 	@Test
 	public void testA() throws InterruptedException {

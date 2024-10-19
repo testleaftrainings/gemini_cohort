@@ -1,4 +1,4 @@
-package sprint_01;
+package Sprint_01;
 
 import java.time.Duration;
 
@@ -9,9 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class sample {
+public class S6_002_EditAccount {
 	
-
 	@Test
 	public void testA() throws InterruptedException
 	{
@@ -37,14 +36,18 @@ public class sample {
 		//Search for the Account Using the unique account name created by you 
 		driver.findElement(By.xpath("//input[@placeholder='Search this list...']")).sendKeys("Aravinth");
 		driver.findElement(By.xpath("//button[@name='refreshButton']")).click();
-		//Thread.sleep(3000);
+		Thread.sleep(3000);
 
 		//Click on the displayed Account Dropdown icon and select Edit
 		driver.findElement(By.xpath("(//a[@role='button'])[25]")).click();
-		
-		driver.findElement(By.xpath("//a[@title='Edit']")).click();
-		
-		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		try {WebElement ele = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@title='Edit']")));
+		ele.click();
+		}
+		catch (org.openqa.selenium.StaleElementReferenceException e){
+			System.out.println("StaleElementException occurred. Refreshing the page.");
+		}
+
 		// Select Type as Technology Partner
 		WebElement ele = driver.findElement(By.xpath("//label[text()='Type']/following::button[1]"));
 		driver.executeScript("arguments[0].click();", ele);

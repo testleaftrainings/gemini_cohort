@@ -1,4 +1,4 @@
-package sprint_01;
+package Sprint_01;
 
 import java.time.Duration;
 
