@@ -2,10 +2,11 @@ package Sprint_01;
 
 import java.time.Duration;
 
-import org.junit.Test;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class S6_32 {
 

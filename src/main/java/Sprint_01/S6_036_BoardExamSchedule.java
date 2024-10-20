@@ -1,40 +1,21 @@
 package Sprint_01;
 
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.github.sukgu.Shadow;
 
-public class S6_036_BoardExamSchedule {
+public class S6_036_BoardExamSchedule extends TestBase {
 	@Test
 	
 	public void s6_036_BoardExamSchedule() throws InterruptedException {
-		
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--disable-notifications");
-
-		ChromeDriver driver = new ChromeDriver(options);
-		Shadow dom = new Shadow(driver);
-		
-		//Launch Salesforce application.
-		driver.get("https://login.salesforce.com/");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		driver.manage().window().maximize();
-		
-		//Login with username  and password.
-		driver.findElement(By.id("username")).sendKeys("gokul.sekar@testleaf.com");
-		driver.findElement(By.id("password")).sendKeys("Leaf$321");
-		driver.findElement(By.id("Login")).click();
 		
 		//Click on Learn More link in Mobile Publisher
 		Thread.sleep(3000);
@@ -59,6 +40,7 @@ public class S6_036_BoardExamSchedule {
 		
 		//Click on the Learning and select Learning on trailhead
 		Actions actions = new Actions(driver);
+		Shadow dom=new Shadow (driver); 
 		dom.findElementByXPath("//span[text()='Learning']").click();
 		Thread.sleep(2000);
 		WebElement LearningOnTrailHead = dom.findElementByXPath("//span[text()='Learning on Trailhead']");
