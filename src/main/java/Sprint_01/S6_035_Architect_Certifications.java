@@ -99,8 +99,5 @@ public class S6_035_Architect_Certifications extends TestBase{
             Assert.assertTrue(strList.contains(str[i]));
 
         }
-
-        driver.close();
-        driver.quit();
     }
 }

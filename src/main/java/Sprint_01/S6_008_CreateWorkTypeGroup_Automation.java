@@ -9,19 +9,10 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class S6_008_CreateWorkTypeGroup_Automation {
+public class S6_008_CreateWorkTypeGroup_Automation extends TestBase{
 
     @Test
     public void createWorkType_Automation() throws InterruptedException{
-        ChromeDriver driver = new ChromeDriver();
-        driver.get("https://login.salesforce.com/");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        driver.manage().window().maximize();
-
-        //Step 1: Login to Login | Salesforce
-        driver.findElement(By.id("username")).sendKeys("gokul.sekar@testleaf.com");
-        driver.findElement(By.id("password")).sendKeys("Leaf$321");
-        driver.findElement(By.id("Login")).click();
 
         //Click on toggle menu button from the left corner
         driver.findElement(By.xpath("//button[@title='App Launcher']/div[1]")).click();
@@ -60,9 +51,6 @@ public class S6_008_CreateWorkTypeGroup_Automation {
         String actual = driver.findElement(By.xpath("//div[contains(@id,'toastDescription')]")).getText();
         Assert.assertEquals(expected, actual);
         System.out.println(text);
-
-        driver.close();
-        driver.quit();
 
     }
 

@@ -83,8 +83,5 @@ public class S6_029_Edit_Dashboard extends TestBase{
         String actual = driver.findElement(By.xpath("//div[contains(@id,'toastDescription')]")).getText();
         Assert.assertTrue(actual.contains(expected));
         System.out.println(text);
-
-        driver.close();
-        driver.quit();
     }
 }
