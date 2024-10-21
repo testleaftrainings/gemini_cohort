@@ -34,9 +34,9 @@ public class TestBase {
         driver.findElement(By.id("Login")).click();
     }
 
-    @AfterMethod
+    /*@AfterMethod
     public void tearDown(){
         driver.close();
         driver.quit();
-    }
+    }*/
 }
