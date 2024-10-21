@@ -19,8 +19,7 @@ public class TestBase {
     @BeforeMethod
     public void initTest() throws MalformedURLException{
 
-    	ChromeOptions options = new ChromeOptions();
-//    	EdgeOptions options = new EdgeOptions();
+    	EdgeOptions options = new EdgeOptions();
         DesiredCapabilities dc = new DesiredCapabilities(options);
 		dc.setBrowserName("MicrosoftEdge"); //
 		dc.setPlatform(Platform.LINUX);
