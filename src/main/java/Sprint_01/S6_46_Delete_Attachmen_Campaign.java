@@ -8,7 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 public class S6_46_Delete_Attachmen_Campaign extends TestBase {
-	
+
 
 	@Test
 	public void editCampaign() throws InterruptedException, MalformedURLException {

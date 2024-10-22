@@ -12,10 +12,10 @@ import org.testng.annotations.Test;
 
 public class S6_40 extends TestBase {
 public static RemoteWebDriver driver;
+
 	@Test
 	public void testA() throws InterruptedException, MalformedURLException {
-		
-		
+
 		// Click on menu button from the Left corner
 		//Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
