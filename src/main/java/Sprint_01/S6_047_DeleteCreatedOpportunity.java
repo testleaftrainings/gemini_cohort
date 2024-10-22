@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class S6_047_DeleteCreatedOpportunity extends LocalTestBase{
+public class S6_047_DeleteCreatedOpportunity extends TestBase{
 
     @Test
     public void verifyDeleteCreated() throws InterruptedException{
@@ -35,21 +35,27 @@ public class S6_047_DeleteCreatedOpportunity extends LocalTestBase{
 
         //Verify Delete confirmation Message
         String text = driver.findElement(By.xpath("//div[contains(@id,'toastDescription')]")).getText();
-
-        //Click on Opportunities tab
-        driver.findElement(By.xpath("//span[@title='Opportunities'][text()='Opportunities']")).click();
+        System.out.println("This is the "+text);
+        //Opportunity "Oppo Stalin" was deleted.
+        String exp = "Opportunity \"Oppo Stalin\" was deleted.";
+        Assert.assertTrue(text.contains(exp));
 
         Thread.sleep(3000);
 
-        //Click on Search Input Field
-        driver.findElement(By.xpath("//input[@name='Opportunity-search-input']")).click();
+        Assert.assertFalse(driver.findElement(By.xpath("//*[text()='Oppo Stalin']/following::div[1]")).isDisplayed());
 
-        //Enter the search text
-        driver.findElement(By.xpath("//input[@name='Opportunity-search-input']")).sendKeys("Oppo Stalin");
-
-        //Verify No items displayed
-        boolean noItesms = driver.findElement(By.xpath("//span[text()='No items to display.']")).isDisplayed();
-        Assert.assertTrue(noItesms);
+//        //Click on Opportunities tab
+//        driver.findElement(By.xpath("//span[@title='Opportunities'][text()='Opportunities']")).click();
+//
+//        //Click on Search Input Field
+//        driver.findElement(By.xpath("//input[@name='Opportunity-search-input']")).click();
+//
+//        //Enter the search text
+//        driver.findElement(By.xpath("//input[@name='Opportunity-search-input']")).sendKeys("Oppo Stalin");
+//
+//        //Verify No items displayed
+//        boolean noItesms = driver.findElement(By.xpath("//span[text()='No items to display.']")).isDisplayed();
+//        Assert.assertTrue(noItesms);
 
 
 
