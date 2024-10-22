@@ -70,9 +70,6 @@ public class S6_023_CreateLegalEntity  extends TestBase{
         Assert.assertTrue(actual.contains(expected));
         System.out.println(text);
 
-        driver.close();
-        driver.quit();
-
     }
 
 }

@@ -127,8 +127,5 @@ public class S6_048_CreateLead_For_Campaigns extends TestBase{
         String act = driver.findElement(By.xpath("//a[@title='S Dasda']")).getText();
         Assert.assertTrue(act.contains(exp));
 
-        driver.close();
-        driver.quit();
-
     }
 }

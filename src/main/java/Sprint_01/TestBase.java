@@ -6,6 +6,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Platform;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -14,19 +15,15 @@ import org.testng.annotations.BeforeMethod;
 
 public class TestBase {
 
-//    WebDriver driver;
-//    public TestBase(WebDriver driver){
-//        this.driver = driver;
-//    }
     public  RemoteWebDriver driver;
     @BeforeMethod
     public void initTest() throws MalformedURLException{
 
-    	EdgeOptions options = new EdgeOptions(); 
-		  DesiredCapabilities dc = new DesiredCapabilities(options); 
-		  dc.setBrowserName("MicrosoftEdge"); //
-		  dc.setPlatform(Platform.LINUX);
-		  driver = new RemoteWebDriver(new URL("http://20.40.48.160:4444/wd/hub"), dc);
+    	EdgeOptions options = new EdgeOptions();
+        DesiredCapabilities dc = new DesiredCapabilities(options);
+		dc.setBrowserName("MicrosoftEdge"); //
+		dc.setPlatform(Platform.LINUX);
+		driver = new RemoteWebDriver(new URL("http://20.40.48.160:4444/wd/hub"), dc);
 
         driver.get("https://login.salesforce.com/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
@@ -37,10 +34,10 @@ public class TestBase {
         driver.findElement(By.id("password")).sendKeys("Leaf@123");
         driver.findElement(By.id("Login")).click();
     }
-    
-    @AfterMethod
+
+    /*@AfterMethod
     public void tearDown(){
         driver.close();
         driver.quit();
-    }
+    }*/
 }

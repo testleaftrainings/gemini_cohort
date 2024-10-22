@@ -62,6 +62,8 @@ public class S6_035_Architect_Certifications extends TestBase{
         }
         driver.findElement(By.xpath("//button[contains(text(), 'Confirm')]")).click();
 
+        Thread.sleep(2000);
+
         //Click on 'Accept Cookies'
         driver.findElement(By.xpath("//button[contains(text(), 'Accept All Cookies')]")).click();
 
@@ -99,8 +101,5 @@ public class S6_035_Architect_Certifications extends TestBase{
             Assert.assertTrue(strList.contains(str[i]));
 
         }
-
-        driver.close();
-        driver.quit();
     }
 }

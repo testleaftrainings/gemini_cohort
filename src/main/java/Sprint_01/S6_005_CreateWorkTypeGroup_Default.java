@@ -1,17 +1,6 @@
 package Sprint_01;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
-import java.time.Duration;
-
-public class S6_005_CreateWorkTypeGroup_Default {
-
-    /*
+/*
     * Test Steps:
 1. Login to https://login.salesforce.com
 2. Click on the toggle menu button from the left corner
@@ -33,17 +22,19 @@ https://drive.google.com/file/d/1yzgZeBKH9TesJV5vm92c6-9Sffn6Ie63/view?usp=shari
     *
     * */
 
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import java.time.Duration;
+
+public class S6_005_CreateWorkTypeGroup_Default extends TestBase{
+
     @Test
     public void createWorkType() throws InterruptedException{
-        ChromeDriver driver = new ChromeDriver();
-        driver.get("https://login.salesforce.com/");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        driver.manage().window().maximize();
-
-        //Step 1: Login to Login | Salesforce
-        driver.findElement(By.id("username")).sendKeys("gokul.sekar@testleaf.com");
-        driver.findElement(By.id("password")).sendKeys("Leaf$321");
-        driver.findElement(By.id("Login")).click();
 
         //Click on toggle menu button from the left corner
         driver.findElement(By.xpath("//button[@title='App Launcher']/div[1]")).click();
@@ -78,9 +69,6 @@ https://drive.google.com/file/d/1yzgZeBKH9TesJV5vm92c6-9Sffn6Ie63/view?usp=shari
         String actual = driver.findElement(By.xpath("//div[contains(@id,'toastDescription')]")).getText();
         Assert.assertEquals(expected, actual);
         System.out.println(text);
-
-        driver.close();
-        driver.quit();
 
     }
 
