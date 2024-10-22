@@ -6,11 +6,9 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Platform;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 public class TestBase {
@@ -35,7 +33,7 @@ public class TestBase {
         driver.findElement(By.id("Login")).click();
     }
 
-    /*@AfterMethod
+  /*  @AfterMethod
     public void tearDown(){
         driver.close();
         driver.quit();

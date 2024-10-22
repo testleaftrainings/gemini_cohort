@@ -11,19 +11,18 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 public class S6_40 extends TestBase {
-public static RemoteWebDriver driver;
 
 	@Test
 	public void testA() throws InterruptedException, MalformedURLException {
 
 		// Click on menu button from the Left corner
-		//Thread.sleep(3000);
+		Thread.sleep(3000);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@title='App Launcher']")));
 		driver.findElement(By.xpath("//button[@title='App Launcher']")).click();
 
 		// Click view All and click Service Console from App Launcher
-		//Thread.sleep(3000);
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//button[text()='View All']")).click();
 		WebElement element = driver.findElement(By.xpath("//p[text()='Service Console']"));
 		driver.executeScript("arguments[0].click();", element);
