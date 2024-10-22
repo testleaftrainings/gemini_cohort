@@ -9,6 +9,7 @@ import org.openqa.selenium.Platform;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 public class TestBase {
@@ -33,7 +34,13 @@ public class TestBase {
 
         //Step 1: Login to Login | Salesforce
         driver.findElement(By.id("username")).sendKeys("gokul.sekar@testleaf.com");
-        driver.findElement(By.id("password")).sendKeys("Leaf$321");
+        driver.findElement(By.id("password")).sendKeys("Leaf@123");
         driver.findElement(By.id("Login")).click();
+    }
+    
+    @AfterMethod
+    public void tearDown(){
+        driver.close();
+        driver.quit();
     }
 }

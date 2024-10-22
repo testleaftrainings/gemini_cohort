@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
-public class S6_46_Delete_Attachmen_Campaign extends TestBase {
+public class S6_46_Delete_Attachmen_Campaign extends LocalTestBase {
 	
 
 	@Test
