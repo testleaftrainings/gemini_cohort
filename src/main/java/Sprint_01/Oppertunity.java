@@ -9,7 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class Oppertunity extends LocalTestBase {
+public class Oppertunity extends TestBase {
 	@Test
 	public void oppertunity() {
 		
