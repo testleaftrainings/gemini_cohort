@@ -35,7 +35,8 @@ public class S6_58 extends LocalTestBase{
 		driver.findElement(By.xpath("(//a[contains(@class,'icon ')])[14]")).click();
 		driver.findElement(By.xpath("//a[@title='Contacts']")).click();
 		driver.findElement(By.xpath("//input[@title='Search Contacts']")).click();
-		driver.findElement(By.xpath("(//span[text()='Test Leaf'])[3]")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//span[@part='formatted-rich-text' and text()='Test Leaf']")).click();
 	//	Click on the image of Related To field, click on Product and Select Product
 		driver.findElement(By.xpath("(//a[contains(@class,'icon ')])[15]")).click();
 		WebElement element = driver.findElement(By.xpath("//span[contains(@title,'Products')]"));
@@ -44,6 +45,7 @@ public class S6_58 extends LocalTestBase{
 		driver.findElement(By.xpath("(//span[text()='JeyaGokul'])[27]")).click();
 	//	Click Save Expected Result:      
 		driver.findElement(By.xpath("//span[text()='Save']")).click();
+		Thread.sleep(2000);
 		String text = driver.findElement(By.xpath("//div[contains(@id,'toastDescription')]")).getText();
 		System.out.println(text);
 	}
