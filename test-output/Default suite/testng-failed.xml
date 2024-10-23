@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Sprint1.S6_006_EditWorkTypeGroup">
+      <class name="Sprint_01.S6_58">
         <methods>
-          <include name="s6_006_EditWorkTypeGroup"/>
+          <include name="testA"/>
+          <include name="initTest"/>
         </methods>
-      </class> <!-- Sprint1.S6_006_EditWorkTypeGroup -->
+      </class> <!-- Sprint_01.S6_58 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
