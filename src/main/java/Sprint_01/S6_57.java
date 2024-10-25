@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class S6_57 extends LocalTestBase {
+public class S6_57 extends TestBase {
 	
 	@Test
 	public void testA() throws InterruptedException 
