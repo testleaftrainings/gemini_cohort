@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="Sprint_01.S6_13CreateCasewithoutMandatoryFields">
+        <methods>
+          <include name="initTest"/>
+          <include name="tearDown"/>
+          <include name="CreateCasewithoutMandatoryFields"/>
+        </methods>
+      </class> <!-- Sprint_01.S6_13CreateCasewithoutMandatoryFields -->
+      <class name="Sprint_01.S6_008_CreateWorkTypeGroup_Automation">
+        <methods>
+          <include name="initTest"/>
+          <include name="createWorkType_Automation"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Sprint_01.S6_008_CreateWorkTypeGroup_Automation -->
+      <class name="Sprint_01.S6_46_Delete_Attachmen_Campaign">
+        <methods>
+          <include name="initTest"/>
+          <include name="tearDown"/>
+          <include name="editCampaign"/>
+        </methods>
+      </class> <!-- Sprint_01.S6_46_Delete_Attachmen_Campaign -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
