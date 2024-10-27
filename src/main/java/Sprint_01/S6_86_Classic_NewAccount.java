@@ -28,7 +28,7 @@ import org.testng.annotations.Test;
 import java.util.Date;
 import java.util.List;
 
-public class S6_86_Classic_NewAccount  extends LocalTestBase{
+public class S6_86_Classic_NewAccount  extends TestBase{
 
     @Test
     public void createClassicNewAccount() throws InterruptedException{

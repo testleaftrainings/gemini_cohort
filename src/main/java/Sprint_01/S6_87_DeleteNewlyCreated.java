@@ -33,7 +33,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class S6_87_DeleteNewlyCreated  extends LocalTestBase{
+public class S6_87_DeleteNewlyCreated  extends TestBase{
 
     @Test
     public void deleteClassicNewAccount() throws InterruptedException{
