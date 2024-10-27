@@ -42,14 +42,16 @@ public class NBA_Assessment_Aravinth {
 		// 6. Choose 'Season Segment' as 'Last Game'
 		Select obj3 = new Select(driver.findElement(By.xpath("(//select[contains(@class,'DropDown_select')])[4]")));
 		obj3.selectByVisibleText("Last Game");
-		Thread.sleep(3000);
-
+		// Thread.sleep(3000);
+		// driver.findElement(By.xpath("//span[contains(text(),'dialog')]")).click();
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'dialog')]")));
-			driver.findElement(By.xpath("//span[contains(text(),'dialog')]")).click();
-		} catch (Exception e) {
-			throw new Error("Timeout exception");
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//span[contains(text(),'dialog')]/preceding::button[1])[2]")));
+				//("//span[contains(text(),'dialog')]")));
+		driver.findElement(By.xpath("(//span[contains(text(),'dialog')]/preceding::button[1])[2]")).click();
+		}catch(Exception e)
+		{
+			System.out.println("TimeoutException");
 		}
 		// driver.findElement(By.xpath("//span[text()='close email sign up
 		// banner']")).click();
