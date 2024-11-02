@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -49,7 +50,7 @@ public class NBA_Assessment_Aravinth {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//span[contains(text(),'dialog')]/preceding::button[1])[2]")));
 				//("//span[contains(text(),'dialog')]")));
 		driver.findElement(By.xpath("(//span[contains(text(),'dialog')]/preceding::button[1])[2]")).click();
-		}catch(Exception e)
+		}catch(TimeoutException e)
 		{
 			System.out.println("TimeoutException");
 		}
