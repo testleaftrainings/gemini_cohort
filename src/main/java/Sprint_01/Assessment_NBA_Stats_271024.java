@@ -70,25 +70,31 @@ public class Assessment_NBA_Stats_271024 extends TestBase{
         List<WebElement> table = driver.findElements(By.xpath("//*[@class='Crom_body__UYOcU']/tr[*]/td[4]"));
         Map<Integer, Integer> least = new HashMap<Integer, Integer>();
         Thread.sleep(3000);
+        int row =0;
         for(int i=0;i< table.size();i++){
 
             try{
                 if(least.get(0) > Integer.parseInt(table.get(i).getText())){
                     int val = Integer.parseInt(table.get(i).getText());
                     least.put(0,least.getOrDefault(table.get(i).getText(), val));
+                    row = i;
                 }
             }catch(NullPointerException e){
                 Thread.sleep(2000);
                 int val = Integer.parseInt(table.get(i).getText());
                 least.put(0,least.getOrDefault(table.get(i).getText(), val));
+
             }
         }
+        row++;
 
         String age = least.get(0).toString();
 
         Thread.sleep(2000);
 
-        for(int i=1;i< table.size();i++){
+        driver.findElement(By.xpath("//*[@class='Crom_body__UYOcU']/tr["+row+"]/td[2]")).click();
+
+        /*for(int i=1;i< table.size();i++){
            if(driver.findElement(By.xpath("//*[@class='Crom_body__UYOcU']/tr["+i+"]/td[4]")).getText().contains(age)){
                try{
                    driver.findElement(By.xpath("//*[@class='Crom_body__UYOcU']/tr["+i+"]/td[2]")).click();
@@ -101,7 +107,7 @@ public class Assessment_NBA_Stats_271024 extends TestBase{
                }
 
            }
-       }
+       }*/
 
        //Get the Experience of the player
         driver.findElement(By.xpath("//p[text()='EXPERIENCE']")).click();
