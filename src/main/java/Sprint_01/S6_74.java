@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class S6_74 extends LocalTestBase {
+public class S6_74 extends LocalTestBase_A {
 	@Test
 	public void testA() throws InterruptedException {
 		Thread.sleep(3000);
