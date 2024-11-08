@@ -17,8 +17,6 @@ Test steps:
 * */
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -28,7 +26,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Assessment_NBA_Stats_271024 extends TestBase{
+public class Assessment_NBA_Stats_StalinDurai_271024 extends TestBase{
 
     @Test
     public void verifyYoungestPlayer() throws InterruptedException{

@@ -3,7 +3,7 @@
 <suite name="Suite">
     <test thread-count="5" name="Test">
         <classes>
-            <class name="Sprint_01.Assessment_NBA_Stats_271024"/>
+            <class name="Sprint_01.Assessment_NBA_Stats_StalinDurai_271024"/>
 
         </classes>
     </test> <!-- Test -->
